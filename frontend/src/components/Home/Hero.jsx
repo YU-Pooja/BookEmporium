@@ -1,24 +1,29 @@
 import React from 'react'
 import './Herro.css'
 import { Link } from 'react-router-dom';
+import RecentlyAdded from './RecentlyAdded';
 
 
 // correct one 
 const Hero = () => {
         return (
+            <>
             <div className='mx-auto w-100 h-100 container flex'>
                 <div className="mx-auto flex flex-col mt-[90px]">
                     <h1 className=' mx-auto  text-4xl lg:text-6xl font-semibold text-white lg:text-left bg-black rounded-lg px-4 py-2'>DISCOVER YOUR-SELF</h1>
                     <div className='mt-8'>
                         <Link to="/all-books" className='mt-[90px] bg-white font-semibold text-black text-xl lg:text-2xl border border-yellow-100 px-10 py-3 hover:bg-zinc-800 rounded-full'>Discover Books</Link>
                     </div>
-                    <p className='bg-black mx-auto text-2xl text-white bold text-center lg:text-center font-semibold rounded-lg px-2 py-2 mt-[200px] mb-[10%]'>
+                    {/* <p className='bg-black mx-auto text-2xl text-white bold text-center lg:text-center font-semibold rounded-lg px-2 py-2 mt-[200px] mb-[10%]'>
                         Books are the quietest and most constant of friends; they are <br/> the most accessible and wisest of counselors, and the most patient of teachers.
-                    </p>
+                    </p> */}
                     
                 </div>
-
+                
             </div>
+            <RecentlyAdded />
+            </>
+
         );
     };
     

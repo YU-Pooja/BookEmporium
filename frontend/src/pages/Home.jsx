@@ -10,3 +10,8 @@ const Home = () => {
 }
 
 export default Home
+
+//box-model
+//marg padd
+//margin colaps
+//position css

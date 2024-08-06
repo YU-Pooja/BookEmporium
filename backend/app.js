@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 require("dotenv").config();
 require("./conn/connectingDB")
 const bodyparser = require('body-parser')
@@ -8,6 +9,8 @@ const BooksRoutee = require("./routes/book");
 const FavouriteRoutee = require("./routes/favourite")
 const CartRoutee = require("./routes/caart")
 const OrderRoutee = require("./models/order")
+
+app.use(cors());
 app.use(bodyparser.json());
 app.use('/posting',userRoutee);
 app.use('/book',BooksRoutee);
